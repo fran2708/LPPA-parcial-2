@@ -3,13 +3,14 @@ function obtenerElementos(){
     pass = document.getElementById("txt-pass")
     submit = document.getElementById("btn-submit")
     lblError = document.getElementById("error-login")
-    lblErrorMail = document.getElementById("error-mail")
+    lblErrorMail = document.getElementById("error-email")
     lblErrorPass = document.getElementById("error-pass")
 }
 
 window.onload = () => {
     comprobarSesion()
     obtenerElementos()
+    ocultarLabel()
     submit.onclick = (e) => {
         e.preventDefault();
         if (validarCampos()) {
@@ -59,5 +60,16 @@ function login(data){
         location = "./dashboard.html"
     }else {
         lblError.classList.toggle("hidden", false)
+    }
+}
+
+function ocultarLabel(){
+    email.onfocus = () => {
+        lblErrorMail.classList.toggle("hidden",true)
+        lblError.classList.toggle("hidden",true)
+    }
+    pass.onfocus = () => {
+        lblError.classList.toggle("hidden",true)
+        lblErrorPass.classList.toggle("hidden",true)
     }
 }

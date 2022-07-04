@@ -82,5 +82,5 @@
 
 .form-button:hover{
     color: var(--celeste);
-    background-color: #5f95ad48;
+    background-color: var(--gris);
 }
