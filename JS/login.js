@@ -65,8 +65,8 @@ function login(data){
 
 function ocultarLabel(){
     email.onfocus = () => {
-        lblErrorMail.classList.toggle("hidden",true)
         lblError.classList.toggle("hidden",true)
+        lblErrorMail.classList.toggle("hidden",true)
     }
     pass.onfocus = () => {
         lblError.classList.toggle("hidden",true)
