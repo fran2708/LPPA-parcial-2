@@ -8,9 +8,7 @@ window.onload = function(){
     if (localStorage.isLogged !== "true") {
         logout()
     }
-    btnLogout.onclick = () => {
-        logout()
-    }
+    btnLogout.onclick = logout
     requestAPI()
 }
 
